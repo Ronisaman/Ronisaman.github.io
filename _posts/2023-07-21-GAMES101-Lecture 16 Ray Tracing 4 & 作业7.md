@@ -373,6 +373,17 @@ Vector3f Scene::castRay(const Ray &ray, int depth) const
 
 * 代码如下：
 
+* 在Renderer.cpp文件中添加以下头文件和全局变量
+
+```cpp
+#include <thread>
+#include <mutex>
+
+
+std::mutex mtx;
+int progress = 0;
+```
+
 ```cpp
 void Renderer::Render(const Scene& scene)
 {
