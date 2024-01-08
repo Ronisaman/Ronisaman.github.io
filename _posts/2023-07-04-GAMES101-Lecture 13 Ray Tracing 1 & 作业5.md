@@ -245,7 +245,28 @@ mermaid: true
 * 第二，也就是通过Moller-Trumbore 算法来计算值，这个在课程有讲，所以直接套公式就行，其中算出来的t就是函数中的形参tnear，b1就是函数中的形参u，b2是函数中的形参v
 
 ```cpp
+bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f& v2, const Vector3f& orig,
+                          const Vector3f& dir, float& tnear, float& u, float& v)
+{
+    // TODO: Implement this function that tests whether the triangle
+    // that's specified bt v0, v1 and v2 intersects with the ray (whose
+    // origin is *orig* and direction is *dir*)
+    // Also don't forget to update tnear, u and v.
+    Vector3f e1 = v1 - v0;
+    Vector3f e2 = v2 - v0;
+    Vector3f s = orig - v0;
+    Vector3f s1 = crossProduct(dir, e2);
+    Vector3f s2 = crossProduct(s, e1);
+    tnear = (1 / dotProduct(s1, e1)) * dotProduct(s2, e2);
+    u = (1 / dotProduct(s1, e1)) * dotProduct(s1, s);
+    v = (1 / dotProduct(s1, e1)) * dotProduct(s2, dir);
 
+    if (u > 0 && v > 0 && u + v < 1 && tnear > 0)
+    {
+        return true;
+    }
+    return false;
+}
 ```
 
 * 在做的时候，我把更新tnear、u、v放在了检测出射线和三角形相交的代码块中，导致图片中地面的颜色是黑色的，实际上每次都应该更新，因为这个光线（也就是primary ray）没有打到三角形（也就是平面）的话，应该是有颜色的，如果不更新uv，就无法正常计算颜色了
