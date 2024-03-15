@@ -188,9 +188,9 @@ void Scene::sampleLight(Intersection &pos, float &pdf) const
   
   [![pCXlRpt.jpg](https://s1.ax1x.com/2023/07/25/pCXlRpt.jpg)](https://imgse.com/i/pCXlRpt)
   
-  * 其中，`wi`是摄像机到物体obj的方向(也就是prime ray)，但是在Diffuse模型中不会用到，这个参数会在附加题微表面模型(Microfacet)中用到
+  * 其中，`wo`是摄像机到物体obj的方向(也就是prime ray)，但是在Diffuse模型中不会用到，这个参数会在附加题微表面模型(Microfacet)中用到
   
-  * `wo`就是物体obj指向光源或者物体obj2的方向，N就是光源或者obj2的法向量
+  * `wi`就是物体obj指向光源或者物体obj2的方向，N就是光源或者obj2的法向量
   
   * 需要注意的是，这是函数的方向图，在写代码的时候要注意写的方向是不是相反了，如果相反，那么在调用函数的时候需要在前面加个负号
 
