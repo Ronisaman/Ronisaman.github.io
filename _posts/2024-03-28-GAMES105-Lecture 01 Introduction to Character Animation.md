@@ -14,6 +14,7 @@ math: true
 mermaid: true
 
 ---
+pdf地址：[Introduction to Character Animation](https://games-105.github.io/ppt/01%20-%20Introduction.pdf)
 
 ## 3D Computer Animation
 
