@@ -6,7 +6,7 @@ order: 4
 ---
 
 <center>
-     <h1>张召寒</h1>
+     <h1>胡然</h1>
  </center>
 
 ## 个人信息
@@ -15,7 +15,7 @@ order: 4
 
 - 手 机：*******8771&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;邮 箱：[563638083@qq.com](mailto:563638083@qq.com)
 
-- 专 业：数字媒体技术&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;岗 位：游戏研发工程师
+- 专 业：数字媒体技术&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;岗 位：嵌入式工程师
 
 ## 教育经历
 
